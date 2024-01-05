@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Inclusion du fichier css pour le style du jeu -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Inclusion des 3 scripts nécessaires pour faire fonctionner le jeu -->
+    <!-- Attention, l'ordre des fichiers js est important.  -->
+    <script src="config.js" defer></script>
+    <script src="popup.js" defer></script>
+    <script src="script.js" defer>  </script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1>QwertyFax</h1>
+        <h2>The application to write faster</h2>
+        <h3>QwertyFax is an online application to learn to type faster on the keyboard :)</h3>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div class="zoneOptions">
+            <p>Choose your option and type the suggestion that appears in the field below.</p>
+            <div class="optionSource">
+                <input type="radio" name="optionSource" id="mots" value="1" checked>
+                <label for="mots">word</label>
+                <input type="radio" name="optionSource" id="phrases" value="2">
+                <label for="phrases">Sentences</label>
+            </div>
+        </div>
+
+        <div class="zoneProposition">
+            Azerty
+        </div>
+
+        <div class="zoneSaisie">
+            <input type="text" id="inputEcriture" name="inputEcriture">
+            <button id="btnValiderMot"> to validate</button>
+        </div>
+
+        <div class="zoneScore">
+            Your score : <span>0</span>
+        </div>
+
+        <div class="zonePartage">
+            <button>share</button>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        @septomerveille : Devseptomerveille.
+    </footer>
+    <!-- Popup de partage -->
+    <div class="popupBackground">
+        <div class="popup">
+            <div>Partagez votre score</div>
+            <form novalidate>
+                <label for="nom">Votre nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                <label for="email">Avec qui voulez-vous partager votre score ?</label>
+                <input type="email" id="email" name="email" placeholder="nom@domaine.com">
+                <button id="btnEnvoyerMail">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
